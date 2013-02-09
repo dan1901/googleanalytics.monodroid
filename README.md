@@ -8,6 +8,7 @@ Installation
 Follow these steps to use the Google Analytics SDK in your Mono for Android app.
 
 1. Add a reference to the GoogleAnalytics.Monodroid Assembly
+2. Add the libGoogleAnalyticsV2.jar file (found in the Jars directory) to your app project and set its build action to "AndroidJavaLibrary"
 2. Update your manifest with the INTERNET and ACCESS\_NETWORK\_STATE permissions
 
 After performing the previous two steps you need to add a new resource file to the app with the following contents:
