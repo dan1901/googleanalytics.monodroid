@@ -27,20 +27,22 @@ Usage
 -----
 To use the tracking logic, you need to add two pieces of code in your activity
 
-    public class MyActivity: Activity
-	{
-		protected override void OnStart()
-		{
-			base.OnStart();
-			EasyTracker.Instance.ActivityStart(this);
-		}
+    using Com.Google.Analytics.Tracking.Android;
 
-		protected override void OnStop()
-		{
-			base.OnStop();
-			EasyTracker.Instance.ActivityStop(this);
-		}
-	}
+    public class MyActivity: Activity
+    {
+        protected override void OnStart()
+        {
+            base.OnStart();
+            EasyTracker.Instance.ActivityStart(this);
+        }
+
+        protected override void OnStop()
+        {
+            base.OnStop();
+            EasyTracker.Instance.ActivityStop(this);
+        }
+    }
 
 For convenience there's a base type `TrackableActivity` included in the assembly. The use of this base type is not required.
 
