@@ -48,6 +48,15 @@ For convenience there's a base type `TrackableActivity` included in the assembly
 
 All analytics calls from within an activity are tracked. If you have to make calls from other components, you may have to use `EasyTracker.Instance.Context = <myActivityInstance>`
 
+Debugging
+---------
+If you're using the Google analytics SDK in your app and want to debug the logic to track activity in your app, you may have to modify the `ga_dispatchPeriod` parameter in the analytics.xml. By default the dispatch period is 30 minutes, this is however much longer than you want during debugging. So instead you can specify 
+    
+    <!-- Dispatch period is specified in seconds -->    
+    <integer name="ga_dispatchPeriod">20</integer>
+
+Make sure you remove the setting when you run in production mode. A shorter dispatch period costs extra battery and processor cycles, thus reducing the performance of the app.
+
 More information
 ----------------
 This readme file covers the basics. There's a lot more you can do. Check out the following sources for more information:
